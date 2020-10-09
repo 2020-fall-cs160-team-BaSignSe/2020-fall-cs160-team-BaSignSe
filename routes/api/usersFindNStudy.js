@@ -34,7 +34,7 @@ router.post(
       // See if the user exists
       // if user exists send back error b/c we don't want multiple emails
 
-      let user = await User.findOne({ email }); // same as {email : email}
+      let user = await UserFindNStudy.findOne({ email }); // same as {email : email}
       if (user) {
         return res
           .status(400)
