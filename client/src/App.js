@@ -11,6 +11,8 @@ import store from "./store";
 import Alert from "./components/layout/Alert";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
+import Login from "./components/auth/Login";
+import Navbar from "./components/layout/Navbar";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -24,12 +26,13 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <Fragment>
-          {/* <Navbar /> */}
+          <Navbar />
           <Route exact path="/" />
           <section className="container">
             <Alert />
             <Switch>
               <Route exact path="/register-user" component={RegisterUser} />
+              <Route exact path="/login" component={Login} />
             </Switch>
           </section>
         </Fragment>

@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link , Redirect} from "react-router-dom";
 import "./myStyles.css";
 
 // connect this compnent to redux using connect
@@ -9,7 +9,7 @@ import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth";
 import PropTypes from "prop-types";
 
-export const RegisterUser = ({ setAlert, register }) => {
+export const RegisterUser = ({ setAlert, register, isAuthenticated }) => {
   // useState always retruns an array w/ 2 values. first val is your state
   // the second value is a function that allows you to update your state.
   const [formData, setFormData] = useState({
@@ -51,6 +51,10 @@ export const RegisterUser = ({ setAlert, register }) => {
     //   console.log(err.response.data);
     // }
   };
+
+  if(isAuthenticated) {
+    return <Redirect to ="/dashboard" />;
+  }
 
   return (
     <Fragment>
@@ -104,7 +108,7 @@ export const RegisterUser = ({ setAlert, register }) => {
           />
           <p> </p>
           <p>
-            <Link to="#!" className="primary">
+            <Link to="/login" className="primary">
               Already have an account?
             </Link>
           </p>
@@ -122,6 +126,11 @@ export const RegisterUser = ({ setAlert, register }) => {
 RegisterUser.propTypes = {
   setAlert: PropTypes.func.isRequired,
   register: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool,
 };
 
-export default connect(null, { setAlert, register })(RegisterUser);
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { setAlert, register })(RegisterUser);
