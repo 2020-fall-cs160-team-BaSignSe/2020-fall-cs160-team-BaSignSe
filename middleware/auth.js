@@ -1,3 +1,6 @@
+//this file checks if we have the header (for); if have header, it compared it with the jwt token via the try and catch block
+//jwt token repreesnts the user
+
 const jwt = require("jsonwebtoken");
 const config = require("config");
 
