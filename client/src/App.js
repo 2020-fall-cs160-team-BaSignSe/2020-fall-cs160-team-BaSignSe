@@ -1,6 +1,9 @@
 import React, { Fragment, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import RegisterUser from "./components/auth/RegisterUser";
+import CreateStudyGroup from "./components/studygroup/CreateStudyGroup";
+import Test from "./components/studygroup/test";
+
 import "./App.css";
 
 // redux stuff
@@ -24,20 +27,21 @@ const App = () => {
   }, []); // second parm is [], b/c we only want this to run once
   return (
     <Provider store={store}>
-      <Router>
-        <Fragment>
-          <Navbar />
-          <Route exact path="/" />
-          <section className="container">
-            <Alert />
-            <Switch>
-              <Route exact path="/register-user" component={RegisterUser} />
-              <Route exact path="/login" component={Login} />
-            </Switch>
-          </section>
-        </Fragment>
-      </Router>
-    </Provider>
+    <Router>
+      <Fragment>
+        <Navbar />
+        <Route exact path="/" />
+        <section className="container">
+          <Alert />
+          <Switch>
+            <Route exact path="/register-user" component={RegisterUser} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/createstudygroup" component={CreateStudyGroup} />
+          </Switch>
+        </section>
+      </Fragment>
+    </Router>
+  </Provider>
   );
 };
 
