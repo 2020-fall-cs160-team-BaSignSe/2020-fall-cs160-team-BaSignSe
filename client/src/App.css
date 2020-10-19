@@ -312,6 +312,14 @@ button {
   opacity: 0.9;
 }
 
+.create-study-button {
+  background: #ffb400;
+  color: black;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
 .navbar ul {
   display: flex;
 }

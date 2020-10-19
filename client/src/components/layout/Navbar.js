@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
+import {Button, Text} from 'reactstrap';
 
 
 const Navbar = ({auth : {isAuthenticated, loading}, logout}) => {
 
   const authLinks = (
     <ul>
+      <Button className = "create-study-button" tag={Link} to="createstudygroup">Create Study Group</Button>
     <li>
       <a onClick={logout} href="#!">
         <i className="fas fa-sign-out-alt"></i>{' '}
