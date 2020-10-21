@@ -1,4 +1,4 @@
-.primary {
+.auth-primary {
   font-size: 12px;
   color: #fed8b1;
 }
@@ -18,7 +18,7 @@ body {
   overflow: hidden;
   background-position: center;
 }
-.sign-up-form {
+.auth-sign-up-form {
   width: 300px;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
   background: #000000;
@@ -27,12 +27,12 @@ body {
   text-align: center;
   border-radius: 10px;
 }
-.sign-up-form h1 {
+.auth-sign-up-form h1 {
   color: #fed8b1;
   margin-bottom: 30px;
 }
 
-.input-box-first-name {
+.auth-input-box-first-name {
   border-radius: 10px;
   padding: 6.7px;
   margin: 10px 0;
@@ -42,7 +42,7 @@ body {
   margin-left: 50;
 }
 
-.input-box-last-name {
+.auth-input-box-last-name {
   border-radius: 10px;
   padding: 6.7px;
   margin: 10px 0;
@@ -53,11 +53,11 @@ body {
   left: 5px;
 }
 
-.input-box {
+.auth-input-box {
   border-radius: 10px;
   padding: 6.7px;
   margin: 10px 0;
-  width: 102%;
+  width: 100%;
   border: 1px solid #999;
   outline: none;
 }
@@ -72,7 +72,7 @@ button {
   outline: none;
   cursor: pointer;
 }
-.signup-btn {
+.auth-signup-btn {
   background-color: #808080;
 }
 hr {

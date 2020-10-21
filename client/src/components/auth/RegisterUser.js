@@ -58,12 +58,12 @@ export const RegisterUser = ({ setAlert, register, isAuthenticated }) => {
 
   return (
     <Fragment>
-      <div className="sign-up-form">
+      <div className="auth-sign-up-form">
         <h1>Sign Up</h1>
         <form onSubmit={(e) => onSubmit(e)}>
           <input
             type="text"
-            className="input-box-first-name"
+            className="auth-input-box-first-name"
             name="firstName"
             placeholder="First Name"
             value={firstName}
@@ -73,7 +73,7 @@ export const RegisterUser = ({ setAlert, register, isAuthenticated }) => {
 
           <input
             type="text"
-            className="input-box-last-name"
+            className="auth-input-box-last-name"
             name="lastName"
             placeholder="Last Name"
             value={lastName}
@@ -82,7 +82,7 @@ export const RegisterUser = ({ setAlert, register, isAuthenticated }) => {
           />
           <input
             type="text"
-            className="input-box"
+            className="auth-input-box"
             name="username"
             placeholder="Your Username"
             value={username}
@@ -90,7 +90,7 @@ export const RegisterUser = ({ setAlert, register, isAuthenticated }) => {
           />
           <input
             type="email"
-            className="input-box"
+            className="auth-input-box"
             name="email"
             placeholder="Your Email"
             value={email}
@@ -99,7 +99,7 @@ export const RegisterUser = ({ setAlert, register, isAuthenticated }) => {
           />
           <input
             type="password"
-            className="input-box"
+            className="auth-input-box"
             name="password"
             placeholder="Your Password"
             value={password}
@@ -108,7 +108,7 @@ export const RegisterUser = ({ setAlert, register, isAuthenticated }) => {
           />
           <p> </p>
           <p>
-            <Link to="/login" className="primary">
+            <Link to="/login" className="auth-primary">
               Already have an account?
             </Link>
           </p>

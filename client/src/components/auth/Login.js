@@ -5,6 +5,7 @@ import axios from "axios";
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {login} from '../../actions/auth'; 
+import "./myStyles.css";
 
 export const Login = ({login, isAuthenticated}) => {
   // useState always retruns an array w/ 2 values. first val is your state
@@ -31,12 +32,12 @@ export const Login = ({login, isAuthenticated}) => {
 
   return (
     <Fragment>
-       <div className="sign-up-form">
+       <div className="auth-sign-up-form">
         <h1>Sign In</h1>
         <form onSubmit={(e) => onSubmit(e)}>
           <input
             type="email"
-            className="input-box"
+            className="auth-input-box"
             name="email"
             placeholder="Your Email"
             value={email}
@@ -45,7 +46,7 @@ export const Login = ({login, isAuthenticated}) => {
           />
           <input
             type="password"
-            className="input-box"
+            className="auth-input-box"
             name="password"
             placeholder="Your Password"
             value={password}
@@ -53,7 +54,7 @@ export const Login = ({login, isAuthenticated}) => {
           />
           <p> </p>
           <p>
-            <Link to="/register-user" className="primary">
+            <Link to="/register-user" className="auth-primary">
               Don't have an account?
             </Link>
           </p>
