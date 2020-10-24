@@ -1,24 +1,48 @@
-import React, { Component } from "react";
-import AppNavbar from "./components/AppNavBar";
-import List from "./components/List";
+import React, { Fragment, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import RegisterUser from "./components/auth/RegisterUser";
+import CreateStudyGroup from "./components/studygroup/CreateStudyGroup";
+import Test from "./components/studygroup/test";
 
+import "./App.css";
+
+// redux stuff
 import { Provider } from "react-redux";
 import store from "./store";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+// more components
+import Alert from "./components/layout/Alert";
+import { loadUser } from "./actions/auth";
+import setAuthToken from "./utils/setAuthToken";
+import Login from "./components/auth/Login";
+import Navbar from "./components/layout/Navbar";
 
-class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <div className="App">
-          <AppNavbar />
-          <List />
-        </div>
-      </Provider>
-    );
-  }
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
 }
+
+const App = () => {
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []); // second parm is [], b/c we only want this to run once
+  return (
+    <Provider store={store}>
+    <Router>
+      <Fragment>
+        <Navbar />
+        <Route exact path="/" />
+        <section className="container">
+          <Alert />
+          <Switch>
+            <Route exact path="/register-user" component={RegisterUser} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/createstudygroup" component={CreateStudyGroup} />
+          </Switch>
+        </section>
+      </Fragment>
+    </Router>
+  </Provider>
+  );
+};
 
 export default App;

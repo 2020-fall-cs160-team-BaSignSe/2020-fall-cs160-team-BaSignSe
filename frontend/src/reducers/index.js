@@ -1,6 +1,7 @@
-import { combineReducers } from "redux";
-import userReducer from "./userReducer";
+// we have multiple reducers, wanna combine reducers
 
-export default combineReducers({
-  user: userReducer,
-});
+import { combineReducers } from "redux";
+import alert from "./alert";
+import auth from "./auth";
+
+export default combineReducers({ alert, auth });

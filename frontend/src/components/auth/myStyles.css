@@ -1,0 +1,81 @@
+.auth-primary {
+  font-size: 12px;
+  color: #fed8b1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* background-image: url(https://elearning.uq.edu.au/files/54217/iStock-520374378.jpg); */
+  background-image: url("abc123.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  overflow: hidden;
+  background-position: center;
+}
+.auth-sign-up-form {
+  width: 300px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  background: #000000;
+  padding: 20px;
+  margin: 20% auto 0;
+  text-align: center;
+  border-radius: 10px;
+}
+.auth-sign-up-form h1 {
+  color: #fed8b1;
+  margin-bottom: 30px;
+}
+
+.auth-input-box-first-name {
+  border-radius: 10px;
+  padding: 6.7px;
+  margin: 10px 0;
+  width: 50%;
+  border: 1px solid #999;
+  outline: none;
+  margin-left: 50;
+}
+
+.auth-input-box-last-name {
+  border-radius: 10px;
+  padding: 6.7px;
+  margin: 10px 0;
+  width: 50%;
+  border: 1px solid #999;
+  outline: none;
+  position: relative;
+  left: 5px;
+}
+
+.auth-input-box {
+  border-radius: 10px;
+  padding: 6.7px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #999;
+  outline: none;
+}
+button {
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20ps;
+  font-size: 15px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.auth-signup-btn {
+  background-color: #808080;
+}
+hr {
+  margin-top: 50px;
+  width: 80%;
+}
