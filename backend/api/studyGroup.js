@@ -7,6 +7,31 @@ const config = require("config");
 const User = require("../../database/UserFindNStudy");
 const auth = require("../../middleware/auth");
 
+// @route   GET api/get-group
+// @desc    Get the groups for a particiular course
+// @access  Public
+router.get(
+    "/:courseId/:courseCode",
+    async (req, res) => {
+
+        try {
+
+            let courseId = req.params.courseId
+            let courseCode = req.params.courseCode
+
+          // find all documents w/ same course
+            const docs = await CreateGroup.find({courseId : courseId, courseCode: courseCode});
+            res.json({
+                docs
+            })
+
+        } catch(err) {
+            console.error(err.message);
+            res.status(500).send("Server Error");
+        }
+
+    });
+
 // @route   POST api/createGroup
 // @desc    register study group
 // @access  Public
