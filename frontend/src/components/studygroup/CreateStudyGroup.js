@@ -84,7 +84,7 @@ export const CreateStudyGroup = ({ createStudyGroup }) => {
                         placeholder="Course ID"
                         value={courseId}
                         onChange={(e) => onChange(e)}
-                        minLength="6"
+                        // minLength="6"
                     />
                     <input
                         type="text"
@@ -93,7 +93,7 @@ export const CreateStudyGroup = ({ createStudyGroup }) => {
                         placeholder="Course Code"
                         value={courseCode}
                         onChange={(e) => onChange(e)}
-                        minLength="6"
+                        // minLength="6"
                     />
                     <p> </p>
 
