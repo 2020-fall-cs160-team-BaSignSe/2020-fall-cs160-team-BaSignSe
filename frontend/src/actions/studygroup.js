@@ -1,17 +1,22 @@
 import axios from "axios";
 import { setAlert } from "./alert";
-import { GET_STUDYGROUP, ADD_STUDYGROUP, STUDYGROUP_LOADING } from "./actions/types";
+import { GET_STUDYGROUP, ADD_STUDYGROUP, STUDYGROUP_LOADING } from "./types";
 import setAuthToken from "../utils/setAuthToken";
 console.log("holaa");
 
-export const getStudyGroups = () => (dispatch) => {
+export const getStudyGroups = () => async (dispatch) => {
   dispatch(setStudyGroupLoading());
-  axios.get("/api/studyGroup").then((res) =>
+  try {
+    console.log("working");
+    const res = await axios.get("/api/studygroup");
+    console.log(res);
     dispatch({
       type: GET_STUDYGROUP,
       payload: res.data,
-    })
-  );
+    });
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 export const setStudyGroupLoading = () => {

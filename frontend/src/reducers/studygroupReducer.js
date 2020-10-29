@@ -6,8 +6,11 @@ const initialState = {
 };
 
 export default function (state = initialState, action) {
+  console.log("reacting to dispatch");
   switch (action.type) {
     case GET_STUDYGROUP:
+      console.log("get");
+      console.log(action.payload);
       return {
         ...state,
         studyGroups: action.payload,
