@@ -8,3 +8,7 @@ export const AUTH_ERROR = "AUTH_ERROR";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAIL = "LOGIN_FAIL"; 
 export const LOGOUT = "LOGOUT"
+
+export const GET_STUDYGROUP = "GET_STUDYGROUP";
+export const ADD_STUDYGROUP = "ADD_STUDYGROUP"
+export const STUDYGROUP_LOADING = "STUDYGROUP_LOADING";
