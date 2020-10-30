@@ -17,6 +17,8 @@ import setAuthToken from "./utils/setAuthToken";
 import Login from "./components/auth/Login";
 import Navbar from "./components/layout/Navbar";
 
+import course from "./components/course/course";
+
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
@@ -37,6 +39,7 @@ const App = () => {
             <Route exact path="/register-user" component={RegisterUser} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/createstudygroup" component={CreateStudyGroup} />
+            <Route exact path="/course" component={course}/>
           </Switch>
         </section>
       </Fragment>
