@@ -1,7 +1,9 @@
 import axios from "axios";
 import { setAlert } from "./alert";
 import setAuthToken from "../utils/setAuthToken";
-
+import {
+  GET_COURSES
+} from "./types";
 
 export const courseFilter = ({
     courseId,
@@ -15,14 +17,8 @@ export const courseFilter = ({
     };
   
     try {
-      //const res = await axios.post("/api/studyGroup", body, config);
-      
-    //   if(courseCode) {
-    //     console.log("djdujdhdhdhdhhdd PATH");
-    //     console.log(courseId);
-    //     console.log(courseCode);
-    //   }
 
+      let data; 
 
       if(courseId  && courseCode ) {
         let path = `/api/course/${courseId}/${courseCode}`
@@ -30,14 +26,23 @@ export const courseFilter = ({
         console.log(path);
         const res = await axios.get(path, config);
         console.log(res.data.docs);
+
+        data = res.data;
       } else if (courseId) {
         let path = `/api/course/${courseId}`
         console.log("2ND PATH");
         console.log(path);
         const res = await axios.get(path, config);
         console.log(res.data.docs);
+
+        data = res.data;
       }
        
+
+      dispatch({
+        type: GET_COURSES,
+        payload: data
+      });
 
     } catch (err) {
       const errors = err.response.data.errors;

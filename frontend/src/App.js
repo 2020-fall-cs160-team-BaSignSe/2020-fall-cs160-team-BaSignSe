@@ -18,6 +18,7 @@ import Login from "./components/auth/Login";
 import Navbar from "./components/layout/Navbar";
 
 import course from "./components/course/course";
+import courseViewer from "./components/course/courseViewer";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -40,6 +41,7 @@ const App = () => {
             <Route exact path="/login" component={Login} />
             <Route exact path="/createstudygroup" component={CreateStudyGroup} />
             <Route exact path="/course" component={course}/>
+            <Route exact path="/courseViewer" component={courseViewer}/>
           </Switch>
         </section>
       </Fragment>

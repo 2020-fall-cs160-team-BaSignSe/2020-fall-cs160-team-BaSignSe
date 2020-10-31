@@ -21,7 +21,16 @@ export const Course = ({ courseFilter } ) => {
         console.log("SUCCESSSSSSSSSS");
         console.log()
         courseFilter({ courseId, courseCode });
+
+        //console.log("HEHEHEHEHEHE");
+        //console.log(this.props.co);
     };
+
+    // componentDidMount() {
+    //     //this.props.courseFilter();
+    //     console.log(this.props);
+    //   }
+
 
     return (
         <Fragment>
@@ -55,4 +64,10 @@ export const Course = ({ courseFilter } ) => {
     );
 }
 
-export default connect(null, { courseFilter })(Course);
+const mapStateToProps = state => ({
+    courses: state.courseReducer.courses
+  });
+  //console.log("HEHEHEHEHEHE");
+  //console.log(mapStateToProps);
+
+export default connect(mapStateToProps, { courseFilter })(Course);
