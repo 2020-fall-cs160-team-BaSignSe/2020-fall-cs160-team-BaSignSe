@@ -20,7 +20,7 @@ import {
         console.log(payload);
         return {
           ...state,
-          courses: payload
+          courses: [payload]
         };
       default:
         return state;

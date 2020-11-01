@@ -20,6 +20,9 @@ export const courseFilter = ({
 
       let data; 
 
+      console.log("In course filter");
+      console.log(courseId); 
+
       if(courseId  && courseCode ) {
         let path = `/api/course/${courseId}/${courseCode}`
         console.log("FIRST PATH");

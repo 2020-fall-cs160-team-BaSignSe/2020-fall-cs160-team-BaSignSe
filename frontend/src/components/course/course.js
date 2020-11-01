@@ -22,8 +22,6 @@ export const Course = ({ courseFilter } ) => {
         console.log()
         courseFilter({ courseId, courseCode });
 
-        //console.log("HEHEHEHEHEHE");
-        //console.log(this.props.co);
     };
 
     // componentDidMount() {
