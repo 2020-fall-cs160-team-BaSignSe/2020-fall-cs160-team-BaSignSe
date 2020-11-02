@@ -28,6 +28,14 @@ class CourseSearch extends Component {
     };
 
   render() {
+    let courses = this.props.courses;
+    if(courses == undefined)
+    {
+        courses = [];
+    }
+    else{
+        courses = courses.docs;
+    }
     return (
         <Fragment>
                 <h1>Find your course</h1>
@@ -56,6 +64,17 @@ class CourseSearch extends Component {
 
                     <input type="submit" className="btn btn-primary" value="Find course" />
                 </form>
+                <ListGroup>
+                <TransitionGroup className="mylist">
+                    {courses.map(({ id, name }) => (
+                    <CSSTransition key={id} timeout={500} classNames="fade">
+                        <ListGroupItem>
+                            {name}
+                        </ListGroupItem>
+                    </CSSTransition>
+                    ))}
+                </TransitionGroup>
+                </ListGroup>
         </Fragment>
     );
   }
@@ -64,8 +83,11 @@ class CourseSearch extends Component {
 function mapStateToProps(state) {
   console.log("State");
   console.log(state);
+  console.log("courses?");
+  console.log(state.courseReducer.courses[0]);
   return {
-    courses: state.courseReducer.courses
+        courses: state.courseReducer.courses[0]
   }
+
 }
 export default connect(mapStateToProps, { courseFilter })(CourseSearch);
