@@ -1,7 +1,29 @@
 import axios from "axios";
 import { setAlert } from "./alert";
 import setAuthToken from "../utils/setAuthToken";
+import { GET_STUDYGROUP, ADD_STUDYGROUP, STUDYGROUP_LOADING } from "./types";
 //console.log("holaa");
+
+export const getStudyGroups = () => async (dispatch) => {
+  dispatch(setStudyGroupLoading());
+  try {
+    console.log("working");
+    const res = await axios.get("/api/studygroup");
+    console.log(res);
+    dispatch({
+      type: GET_STUDYGROUP,
+      payload: res.data,
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const setStudyGroupLoading = () => {
+  return {
+    type: STUDYGROUP_LOADING,
+  };
+};
 
 export const createStudyGroup = ({
     groupName,
@@ -34,7 +56,10 @@ export const createStudyGroup = ({
     try {
       const res = await axios.post("/api/studyGroup", body, config);
   
-
+      dispatch({
+        type: ADD_STUDYGROUP,
+        payload: res.data,
+      });
     } catch (err) {
       const errors = err.response.data.errors;
       if (errors) {

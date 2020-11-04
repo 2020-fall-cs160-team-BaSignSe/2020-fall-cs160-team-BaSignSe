@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import RegisterUser from "./components/auth/RegisterUser";
 import CreateStudyGroup from "./components/studygroup/CreateStudyGroup";
+import ViewStudyGroup from "./components/studygroup/ViewStudyGroup";
 import Test from "./components/studygroup/test";
 
 import "./App.css";
@@ -44,6 +45,7 @@ const App = () => {
             <Route exact path="/course" component={course}/>
             <Route exact path="/courseViewer" component={courseViewer}/>
             <Route exact path="/courseSearch" component={CourseSearch}/>
+            <Route exact path="/viewstudygroup" component ={ViewStudyGroup} />
           </Switch>
         </section>
       </Fragment>
