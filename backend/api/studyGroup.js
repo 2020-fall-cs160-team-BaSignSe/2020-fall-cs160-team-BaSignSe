@@ -7,6 +7,12 @@ const config = require("config");
 const User = require("../../database/UserFindNStudy");
 const auth = require("../../middleware/auth");
 
+router.get("/", (req, res) => {
+    CreateGroup.find()
+      .then((studygroup) => res.json(studygroup))
+      .catch((err) => console.log(err));
+  });
+
 // @route   GET api/get-group
 // @desc    Get the groups for a particiular course
 // @access  Public
