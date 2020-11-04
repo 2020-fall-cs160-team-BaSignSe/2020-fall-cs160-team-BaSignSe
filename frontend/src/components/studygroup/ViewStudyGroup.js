@@ -9,24 +9,31 @@ class ViewStudyGroup extends Component {
 
   static propTypes = {
     getStudyGroups: PropTypes.func.isRequired,
-    studyGroups: PropTypes.array.isRequired,
   };
 
 
   componentDidMount() {
-    this.props.getStudyGroups();
+    const query = this.props.location.query || {courseId:'',courseCode:''};
+    let courseId = query.courseId;
+    let courseCode = query.courseCode;
+    this.props.getStudyGroups(courseId,courseCode);
     console.log(this.props);
   }
 
   render() {
+    let studyGroups= this.props.studyGroups.docs;
+    if(studyGroups == undefined)
+    {
+        studyGroups = [];
+    }
     return (
         <Container>
           <ListGroup>
           <TransitionGroup className="mylist">
-            {this.props.studyGroups.map(({ id, groupName }) => (
+            {studyGroups.map(({ id, name }) => (
               <CSSTransition key={id} timeout={500} classNames="fade">
                 <ListGroupItem>
-                  {groupName}
+                  {name}
                 </ListGroupItem>
               </CSSTransition>
             ))}

@@ -4,11 +4,12 @@ import setAuthToken from "../utils/setAuthToken";
 import { GET_STUDYGROUP, ADD_STUDYGROUP, STUDYGROUP_LOADING } from "./types";
 //console.log("holaa");
 
-export const getStudyGroups = () => async (dispatch) => {
+export const getStudyGroups = (courseId,courseCode) => async (dispatch) => {
   dispatch(setStudyGroupLoading());
   try {
     console.log("working");
-    const res = await axios.get("/api/studygroup");
+    let path = `/api/course/${courseId}/${courseCode}`
+    const res = await axios.get(path);
     console.log(res);
     dispatch({
       type: GET_STUDYGROUP,
