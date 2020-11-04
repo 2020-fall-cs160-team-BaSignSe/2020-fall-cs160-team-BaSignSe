@@ -16,6 +16,7 @@ app.get("/", (req, res) => res.send("<b>API running</b>"));
 app.use("/api/authFindNStudy", require("./backend/api/authFindNStudy"));
 app.use("/api/usersFindNStudy", require("./backend/api/usersFindNStudy"));
 app.use("/api/studyGroup", require("./backend/api/studyGroup"));
+app.use("/api/course", require("./backend/api/courseApi"));
 
 const PORT = process.env.PORT || 5000;
 

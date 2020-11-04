@@ -1,7 +1,7 @@
 import axios from "axios";
 import { setAlert } from "./alert";
 import setAuthToken from "../utils/setAuthToken";
-console.log("holaa");
+//console.log("holaa");
 
 export const createStudyGroup = ({
     groupName,
@@ -18,7 +18,7 @@ export const createStudyGroup = ({
         "x-auth-token":localStorage.token,
       },
     };
-    console.log("hola");
+    //console.log("hola");
 
     const body = JSON.stringify({
         groupName,
