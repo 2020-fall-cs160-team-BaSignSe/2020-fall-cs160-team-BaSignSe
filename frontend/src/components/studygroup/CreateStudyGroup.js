@@ -30,8 +30,11 @@ export const CreateStudyGroup = ({ createStudyGroup }) => {
     return (
         <Fragment>
             {/* <div className="csg-create-group-form"> */}
-                <h1>Create Study Group!</h1>
+            <h1 style={{ color: 'black', textAlign: 'center', fontSize: '35px'}}>Create your study group!</h1>
+                <div className="csg-create-group-form">
                 <form onSubmit={(e) => onSubmit(e)}>
+                    <h1></h1>
+                    <h4>Group Name:</h4>
                     <input
                         type="text"
                         className="csg-input-box"
@@ -41,7 +44,8 @@ export const CreateStudyGroup = ({ createStudyGroup }) => {
                         onChange={(e) => onChange(e)}
                         required
                     />
-
+                    <h1></h1>
+                    <h4>Start and End Date:</h4>
                     <input
                         type="text"
                         className="csg-input-box"
@@ -68,15 +72,8 @@ export const CreateStudyGroup = ({ createStudyGroup }) => {
                         onChange={(e) => onChange(e)}
                         required
                     />
-                    <input
-                        type="text"
-                        className="csg-input-box"
-                        name="description"
-                        placeholder="Description"
-                        value={description}
-                        onChange={(e) => onChange(e)}
-                        minLength="6"
-                    />
+                    <h1></h1>
+                    <h4>Course ID and Course Code:</h4>
                     <input
                         type="text"
                         className="csg-input-box"
@@ -95,14 +92,25 @@ export const CreateStudyGroup = ({ createStudyGroup }) => {
                         onChange={(e) => onChange(e)}
                         // minLength="6"
                     />
+                    <h1></h1>
+                    <h4>Description:</h4>
+                    <input
+                        type="text"
+                        className="csg-input-description-box"
+                        name="description"
+                        value={description}
+                        onChange={(e) => onChange(e)}
+                        minLength="6"
+                    />
                     <p> </p>
 
                     {/* <button type="submit" className="signup-btn" value="RegisterUser">
                 Sign up
               </button> */}
-                    <input type="submit" className="btn btn-primary" value="Create Study Group!" />
+                    <input type="submit" className="btn btn-primary" value="Create Study Group" />
                 </form>
             {/* </div> */}
+            </div>
         </Fragment>
     );
 };

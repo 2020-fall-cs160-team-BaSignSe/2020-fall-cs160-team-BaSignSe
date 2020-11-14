@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {login} from '../../actions/auth'; 
 import "./myStyles.css";
+import { SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS } from "constants";
 
 export const Login = ({login, isAuthenticated}) => {
   // useState always retruns an array w/ 2 values. first val is your state
@@ -65,7 +66,6 @@ export const Login = ({login, isAuthenticated}) => {
   );
 };
 
-
 Login.propTypes = {
   login: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool
@@ -76,3 +76,4 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, {login})(Login);
+
