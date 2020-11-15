@@ -8,7 +8,7 @@ export const getStudyGroups = (courseId,courseCode) => async (dispatch) => {
   dispatch(setStudyGroupLoading());
   try {
     console.log("working");
-    let path = `/api/course/${courseId}/${courseCode}`
+    let path = `/api/studyGroup/${courseId}/${courseCode}`
     const res = await axios.get(path);
     console.log(res);
     dispatch({
