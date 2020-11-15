@@ -19,9 +19,7 @@ router.get("/", (req, res) => {
 router.get(
     "/:courseId/:courseCode",
     async (req, res) => {
-
         try {
-
             let courseId = req.params.courseId
             let courseCode = req.params.courseCode
 
@@ -30,13 +28,14 @@ router.get(
             res.json({
                 docs
             })
-
         } catch(err) {
             console.error(err.message);
             res.status(500).send("Server Error");
         }
-
     });
+
+    
+
 
 // @route   POST api/createGroup
 // @desc    register study group

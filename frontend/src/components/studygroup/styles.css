@@ -3,22 +3,26 @@
   color: #fed8b1;
 }
 
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  /* background-image: url(https://elearning.uq.edu.au/files/54217/iStock-520374378.jpg); */
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX9482K4MN7AAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC);
-}
 .csg-create-group-form {
-  width: 300px;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
-  background: #000000;
+  width: 1050px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+  background: #fef7f1;
   padding: 20px;
-  margin: 20% auto 0;
+  margin: 5% auto 0;
   text-align: center;
   border-radius: 10px;
 }
+
+.vsg-table {
+  width: 1000px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+  background: #fef7f1;
+  padding: 20px;
+  margin: 5% auto 0;
+  text-align: center;
+  border-radius: 10px;
+}
+
 .csg-sign-up-form h1 {
   color: #fed8b1;
   margin-bottom: 30px;
@@ -50,6 +54,16 @@ body {
   padding: 6.7px;
   margin: 10px 0;
   width: 20%;
+  border: 1px solid #999;
+  outline: none;
+}
+
+.csg-input-description-box {
+  border-radius: 10px;
+  padding: 6.7px;
+  margin: 10px 0;
+  width: 50%;
+  height: 100px;
   border: 1px solid #999;
   outline: none;
 }
