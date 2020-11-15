@@ -9,6 +9,7 @@ To run the tests:
 -run the command "node index.js"
 
 index.js Test output:
+```
 ********************************************************************************
 ************************** Running Backend Tests *******************************
 ********************************************************************************
@@ -144,4 +145,4 @@ index.js Test output:
   }
 ]
 mandeeppabla@Mandeeps-MBP selenium-tests % 
-
+```
