@@ -12,6 +12,17 @@
   text-align: center;
   border-radius: 10px;
 }
+
+.vsg-table {
+  width: 1000px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+  background: #fef7f1;
+  padding: 20px;
+  margin: 5% auto 0;
+  text-align: center;
+  border-radius: 10px;
+}
+
 .csg-sign-up-form h1 {
   color: #fed8b1;
   margin-bottom: 30px;

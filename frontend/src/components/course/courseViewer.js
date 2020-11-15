@@ -9,7 +9,7 @@ class courseViewer extends Component {
 
     componentDidMount() {
         //this.props;
-        console.log("im in the courseVierer")
+        console.log("im in the courseViewer")
         console.log(this.props);
       }
 

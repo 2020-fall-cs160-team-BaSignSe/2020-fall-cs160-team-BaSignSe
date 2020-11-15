@@ -6,7 +6,7 @@ const StudyGroupSchema = new mongoose.Schema({
     // we will dynamically add the groupAdmin 
   groupAdmin: {
     type: String,
-    reuired: true
+    required: true
   } ,
   groupName: {
     type: String,
