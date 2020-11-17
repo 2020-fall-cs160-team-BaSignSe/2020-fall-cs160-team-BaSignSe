@@ -130,3 +130,118 @@ export const CreateStudyGroup = ({ createStudyGroup }) => {
 }
     
 export default connect(null, { createStudyGroup })(CreateStudyGroup);
+//     return (
+//       <Fragment>
+//           <div className="csg-create-group-form">
+//             <h1>Create Study Group</h1>
+//             <Form onSubmit={(e) => onSubmit(e)}>
+//                 <Form>
+//                     <Row>
+//                     <Col md="6">
+//                         <FormGroup>
+//                         <Label>Group Name </Label>
+//                         <Input
+//                             placeholder="Enter Group Name"
+//                             className="csg-input-box"
+//                             onChange={(e) => onChange(e)}
+//                         ></Input>
+//                         </FormGroup>
+//                     </Col>
+//                     </Row>
+//                     <Row>
+//                     <Col md="6">
+//                         <FormGroup>
+//                         <Label>Start Date </Label>
+//                         <Input
+//                             placeholder="StartDate"
+//                             className="csg-input-box"
+//                             onChange={(e) => onChange(e)}
+//                         ></Input>
+//                         </FormGroup>
+//                     </Col>
+//                     <Col md="6">
+//                         <FormGroup>
+//                         <Label>End Date </Label>
+//                         <Input
+//                             placeholder="EndDate"
+//                             className="csg-input-box"
+//                             onChange={(e) => onChange(e)}
+//                         ></Input>
+//                         </FormGroup>
+//                     </Col>
+//                     <Col md="6">
+//                         <FormGroup>
+//                         <Label>Repeating </Label>
+//                         <Input
+//                             placeholder="Repeating"
+//                             className="csg-input-box"
+//                             onChange={(e) => onChange(e)}
+//                         ></Input>
+//                         </FormGroup>
+//                     </Col>
+//                     </Row>
+//                     <Col md="6">
+//                         <FormGroup>
+//                         <Label>Start Time </Label>
+//                         <Input
+//                             placeholder="Start Time"
+//                             className="csg-input-box"
+//                             onChange={(e) => onChange(e)}
+//                         ></Input>
+//                         </FormGroup>
+//                     </Col>
+//                     <Col md="6">
+//                         <FormGroup>
+//                         <Label>End Time </Label>
+//                         <Input
+//                             placeholder="End Time"
+//                             className="csg-input-box"
+//                             onChange={(e) => onChange(e)}
+//                         ></Input>
+//                         </FormGroup>
+//                     </Col>
+//                     <Col md="6">
+//                         <FormGroup>
+//                         <Label>Time Zone </Label>
+//                         <Input
+//                             placeholder="Time Zone"
+//                             className="csg-input-box"
+//                             onChange={(e) => onChange(e)}
+//                         ></Input>
+//                         </FormGroup>
+//                     </Col>
+//                     <Row>
+//                     <Col md="6">
+//                         <FormGroup>
+//                         <Label>Meeting Link </Label>
+//                         <Input
+//                             placeholder="Meeting Link"
+//                             className="csg-input-box"
+//                             onChange={(e) => onChange(e)}
+//                         ></Input>
+//                         </FormGroup>
+//                     </Col>
+//                     </Row>
+//                     <Row>
+//                     <Col md="6">
+//                         <FormGroup>
+//                         <Label>Description </Label>
+//                         <Input
+//                             placeholder="Enter Description"
+//                             className="csg-input-box"
+//                             onChange={(e) => onChange(e)}
+//                         ></Input>
+//                         </FormGroup>
+//                     </Col>
+//                     </Row>
+//                 </Form>
+//                 <Button variant="primary" type="submit">
+//                     Submit
+//                 </Button>
+//             </Form>
+
+//           </div>
+//       </Fragment>
+//     );
+// };
+// export default connect(null, {createStudyGroup})(CreateStudyGroup);
